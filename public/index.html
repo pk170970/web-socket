@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- spinner -->
+    <div class="spinner">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <h1>📝 Real-Time Todo List (Shared by Room Code)</h1>
+
+    <button class="start">Start App</button>
+    
+    <div class="add-todo-container">
+      <input class="todo-input" placeholder="Type a new todo and hit Enter"
+        onkeydown="if(event.key === 'Enter') addTodo()" />
+    
+      <button class="addBtn" onclick="addTodo()">Add</button>
+    </div>
+    <ul id="todo-list"></ul>
+    
+    <div id="user-info">
+      <div id="username-display"></div>
+      <div id="user-count"></div>
+      <div id="user-avatars"></div>
+    </div>
+    <button class="stop">Leave Room</button>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
