@@ -1,0 +1,170 @@
+/* From Uiverse.io by AqFox */
+.spinner {
+    width: 44px;
+    height: 44px;
+    animation: spinner-y0fdc1 2s infinite ease;
+    transform-style: preserve-3d;
+}
+
+.spinner>div {
+    background-color: rgba(0, 77, 255, 0.2);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    border: 2px solid #004dff;
+}
+
+.spinner div:nth-of-type(1) {
+    transform: translateZ(-22px) rotateY(180deg);
+}
+
+.spinner div:nth-of-type(2) {
+    transform: rotateY(-270deg) translateX(50%);
+    transform-origin: top right;
+}
+
+.spinner div:nth-of-type(3) {
+    transform: rotateY(270deg) translateX(-50%);
+    transform-origin: center left;
+}
+
+.spinner div:nth-of-type(4) {
+    transform: rotateX(90deg) translateY(-50%);
+    transform-origin: top center;
+}
+
+.spinner div:nth-of-type(5) {
+    transform: rotateX(-90deg) translateY(50%);
+    transform-origin: bottom center;
+}
+
+.spinner div:nth-of-type(6) {
+    transform: translateZ(22px);
+}
+
+@keyframes spinner-y0fdc1 {
+    0% {
+        transform: rotate(45deg) rotateX(-25deg) rotateY(25deg);
+    }
+
+    50% {
+        transform: rotate(45deg) rotateX(-385deg) rotateY(25deg);
+    }
+
+    100% {
+        transform: rotate(45deg) rotateX(-385deg) rotateY(385deg);
+    }
+}
+
+
+
+body {
+    font-family: sans-serif;
+    padding: 2rem;
+    background: #f0f0f0;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+.add-todo-container{
+    display: flex;
+    gap:10px;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.todo-input {
+    padding: 0.5rem;
+    font-size: 16px;
+    display: none;
+    width: 400px;
+    border-radius: 3px;
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.5);
+    border: none;
+}
+
+#todo-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+    display: none;
+}
+
+.addBtn, .start, .stop {
+    max-width: 100%;
+    width: 100px;
+    padding: 0.5rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: #1591DD;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+.start{
+    display: block;
+}
+
+li {
+    padding: 0.5rem;
+    margin-bottom: 0.25rem;
+    background: white;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+}
+
+span.done {
+    text-decoration: line-through;
+    color: gray;
+}
+
+button {
+    margin-left: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#loading {
+    font-style: italic;
+}
+
+#user-info {
+    margin-block: 1rem;
+}
+
+#user-avatars, #username-display {
+    display: flex;
+    gap: 8px;
+    margin-top: 0.5rem;
+}
+
+#user-avatars{
+    position: absolute;
+    top:0;
+    right: 20px;
+}
+
+.avatar {
+    width: 30px;
+    height: 30px;
+    background: #007bff;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
